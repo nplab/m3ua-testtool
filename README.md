@@ -10,7 +10,7 @@ This tool uses [guile](https://www.gnu.org/software/guile/) and its extension [g
 
 ## Supported Platforms
 It runs on Unix operating systems providing kernel SCTP support:
-* FreeBSD
+* FreeBSD.
 * Linux, using the `libsctp-dev`package.
 * Mac OS X, using the [SCTP-NKE](https://github.com/sctplab/SCTP_NKE_ElCapitan) for adding kernel SCTP support.
 * Solaris.
