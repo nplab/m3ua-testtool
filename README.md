@@ -1,4 +1,4 @@
-# M3UA Testtool
+# M3UA Testtool and Testsuite
 A test tool for M3UA as specified in [RFC 3332](https://tools.ietf.org/html/rfc3332),
 which is obsoleted by [RFC 4666](https://tools.ietf.org/html/rfc4666), and the ETSI specification
 [ETSI TS 102 142](http://www.etsi.org/deliver/etsi_ts/102100_102199/102142/01.01.01_60/ts_102142v010101p.pdf).
