@@ -11,3 +11,7 @@ This tool uses [guile](https://www.gnu.org/software/guile/) and its extension [g
 ### Linux (Ubuntu)
 ### FreeBSD
 ### Solaris
+
+## Configuration
+
+## Usage
