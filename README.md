@@ -7,11 +7,9 @@ The tests are based on the ETSI test specification
 
 This tool uses [guile](https://www.gnu.org/software/guile/) and its extension 
 [guile-sctp](https://github.com/nplab/guile-sctp) for adding SCTP support.
+Please see [README](https://github.com/nplab/guile-sctp/blob/master/README.md#installation) for installation instructions.
 
 ## Installation
-### Linux (Ubuntu)
-### FreeBSD
-### Solaris
 
 ## Configuration
 
