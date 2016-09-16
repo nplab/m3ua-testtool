@@ -13,12 +13,15 @@ Please see [README](https://github.com/nplab/guile-sctp/blob/master/README.md#in
 For downloading the tool and the tests run
 ```
 git clone https://github.com/nplab/m3ua-testtool.git
+cd m3ua-testtool
 ```
 Then run
 ```
 cc -o runm3uatest runm3uatest.c
 sudo cp runm3uatest /usr/bin
 ```
+to compile and install the `runm3uatest` tool.
+
 Finally change the line in `dotguile`
 ```
 (define dir "/Users/tuexen/Documents/m3ua-testtool/")
