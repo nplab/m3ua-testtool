@@ -10,6 +10,23 @@ This tool uses [guile](https://www.gnu.org/software/guile/) and its extension
 Please see [README](https://github.com/nplab/guile-sctp/blob/master/README.md#installation) for installation instructions.
 
 ## Installation
+For downloading the tool and the tests run
+```
+git clone https://github.com/nplab/m3ua-testtool.git
+```
+Then run
+```
+cc -o runm3uatest runm3uatest.c
+sudo cp runm3uatest /usr/bin
+```
+Finally change the line in `dotguile`
+```
+(define dir "/Users/tuexen/Documents/m3ua-testtool/")
+```
+to reflect the location of the `m3ua-testtool` directory and run
+```
+cp dotguile ~/.guile
+```
 
 ## Configuration
 
