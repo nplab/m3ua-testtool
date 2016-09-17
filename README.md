@@ -51,4 +51,17 @@ and
 (define tester-port  m3ua-port)
 ```
 Further down, you can also define point codes, routing contexts and even parameters sent in the M3UA handshake.
+
 ## Usage
+You can run specfic tests using the `runm3uatest`. For example, to run the `m3ua-asp-aspsm-v-002` test, execute
+```
+runm3uatest m3ua-asp-aspsm-v-002
+```
+You can also run a selection of ASP tests by using the `tcsh` script
+```
+m3ua-testtool/run-some-asp-tests
+```
+or a selection of SGP tests by running the `tcsh` script
+```
+m3ua-testtool/run-some-sgp-tests
+```
