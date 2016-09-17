@@ -65,5 +65,5 @@ or a selection of SGP tests by running the `tcsh` script
 ```
 m3ua-testtool/run-some-sgp-tests
 ```
-Please note that you must verify the verdict by double checking the messages exchanges. This can be done
-by using a protocol analyzer like [Wireshark](https://www.wireshark.org).
+Please note that you must verify the verdict by double checking the message flows.
+This can be done by using a protocol analyzer like [Wireshark](https://www.wireshark.org).
