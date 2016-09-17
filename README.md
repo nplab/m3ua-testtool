@@ -38,5 +38,17 @@ cp dotguile ~/.guile
 ```
 
 ## Configuration
-
+The test tool is configured by editing the file `m3ua-param-testtool.scm`. You can change
+the IP-address and SCTP port numbers used by the test tool and the system under test by
+modifying the entries:
+```
+(define sut-addr "127.0.0.1")
+(define sut-port   0)
+```
+and
+```
+(define tester-addr "127.0.0.1")
+(define tester-port  m3ua-port)
+```
+Further down, you can also define point codes, routing contexts and even parameters sent in the M3UA handshake.
 ## Usage
