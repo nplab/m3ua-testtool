@@ -53,6 +53,8 @@ and
 Further down, you can also define point codes, routing contexts and even parameters sent in the M3UA handshake.
 
 ## Usage
+On Linux, SCTP support is implemented via a loadable kernel module. To load this module, run `sudo modprobe sctp`.
+
 You can run specfic tests using the `runm3uatest`. For example, to run the `m3ua-asp-aspsm-v-002` test, execute
 ```
 runm3uatest m3ua-asp-aspsm-v-002
