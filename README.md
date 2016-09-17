@@ -15,12 +15,18 @@ For downloading the tool and the tests run
 git clone https://github.com/nplab/m3ua-testtool.git
 cd m3ua-testtool
 ```
-Then run
+Then compile the `runm3uatest` using
 ```
 cc -o runm3uatest runm3uatest.c
+```
+and install the binary. For example, you can issue on Linux
+```
 sudo cp runm3uatest /usr/bin
 ```
-to compile and install the `runm3uatest` tool.
+or do the following under FreeBSD
+```
+sudo cp runm3uatest /usr/local/bin
+```
 
 Finally change the line in `dotguile`
 ```
