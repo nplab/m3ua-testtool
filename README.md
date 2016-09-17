@@ -54,6 +54,7 @@ Further down, you can also define point codes, routing contexts and even paramet
 
 ## Usage
 On Linux, SCTP support is implemented via a loadable kernel module. To load this module, run `sudo modprobe sctp`.
+For FreeBSD and Solaris, no action is needed to use SCTP.
 
 You can run specfic tests using the `runm3uatest`. For example, to run the `m3ua-asp-aspsm-v-002` test, execute
 ```
