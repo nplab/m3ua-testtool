@@ -43,7 +43,6 @@
 
 ;;; Define the transport address of the tester
 (define tester-addr "127.0.0.1")
-
 (define tester-port  m3ua-port)
 (define tester-port-1 3000)
 (define tester-port-2 3001)
