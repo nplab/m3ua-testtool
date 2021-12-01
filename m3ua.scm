@@ -776,8 +776,8 @@
   (let ((s (socket AF_INET SOCK_STREAM IPPROTO_SCTP)))
     (catch 'system-error
 	   (lambda ()
-	     (bind s AF_INET (inet-aton local-addr) local-port)
-	     (connect s AF_INET (inet-aton remote-addr) remote-port)
+	     (bind s AF_INET (inet-pton AF_INET local-addr) local-port)
+	     (connect s AF_INET (inet-pton AF_INET remote-addr) remote-port)
 	     (if (defined? 'SCTP_NODELAY)
 		 (setsockopt s IPPROTO_SCTP SCTP_NODELAY 1))
 	     s)
@@ -790,7 +790,7 @@
   (let ((s (socket AF_INET SOCK_STREAM IPPROTO_SCTP)))
     (catch 'system-error  
 	   (lambda ()
-	     (bind s AF_INET (inet-aton local-addr) local-port)
+	     (bind s AF_INET (inet-pton AF_INET local-addr) local-port)
 	     (listen s 1)
 	     (let ((ss (car (accept s))))
 	       (close s)
