@@ -36,10 +36,10 @@
 #define TIMEOUT        0
 #define COMMAND_LENGTH 2048
 
-#define RED(string) "\033[31m"string"\033[0m"
-#define GREEN(string) "\033[32m"string"\033[0m"
-#define YELLOW(string) "\033[33m"string"\033[0m"
-#define BLUE(string) "\033[34m"string"\033[0m"
+#define RED(string) isatty(fileno(stdout))?"\033[31m"string"\033[0m":string
+#define GREEN(string) isatty(fileno(stdout))?"\033[32m"string"\033[0m":string
+#define YELLOW(string) isatty(fileno(stdout))?"\033[33m"string"\033[0m":string
+#define BLUE(string) isatty(fileno(stdout))?"\033[34m"string"\033[0m":string
 
 char command_skel[] =
 "(load-from-path \"%s/.guile\")"
