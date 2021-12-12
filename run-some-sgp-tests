@@ -1,20 +1,21 @@
-#!/usr/bin/env tcsh
+#!/usr/bin/env sh
 
-set timeout = 10
-set sleeptime = 1
+timeout=10
+sleeptime=1
 
-set testcases = (m3ua-sgp-aspsm-v-003 \
-                 m3ua-sgp-aspsm-i-001 \
-                 m3ua-sgp-aspsm-i-002 \
-                 m3ua-sgp-aspsm-i-003 \
-                 m3ua-sgp-aspsm-o-001 \
-                 m3ua-sgp-asptm-v-003 \
-                 m3ua-sgp-asptm-v-008 \
-                 m3ua-sgp-asptm-v-011 \
-                 m3ua-sgp-asptm-i-004 \
-                 m3ua-sgp-asptm-o-001)
+testcases='m3ua-sgp-aspsm-v-003
+           m3ua-sgp-aspsm-i-001
+           m3ua-sgp-aspsm-i-002
+           m3ua-sgp-aspsm-i-003
+           m3ua-sgp-aspsm-o-001
+           m3ua-sgp-asptm-v-003
+           m3ua-sgp-asptm-v-008
+           m3ua-sgp-asptm-v-011
+           m3ua-sgp-asptm-i-004
+           m3ua-sgp-asptm-o-001'
 
-foreach testcase ($testcases)
-  (runm3uatest -t $timeout $testcase > /dev/tty) >& /dev/null
+for testcase in $testcases
+do
+  runm3uatest -t $timeout $testcase 2> /dev/null
   sleep $sleeptime
-end
+done
