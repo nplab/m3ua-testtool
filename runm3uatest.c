@@ -71,10 +71,11 @@ main(int argc, char *argv[]) {
 	unsigned int timeout;
 	int status, c;
 	char command[COMMAND_LENGTH];
+	char *dir = getenv("HOME");
 
 	timeout = TIMEOUT;
 
-	while ((c = getopt(argc, argv, "t:")) != -1) {
+	while ((c = getopt(argc, argv, "t:d:")) != -1) {
 		switch(c) {
 			case 'h':
 				print_usage();
@@ -83,6 +84,9 @@ main(int argc, char *argv[]) {
 			case 't':
 				timeout = (unsigned int)atoi(optarg);
 				break;
+			case 'd':
+				dir = optarg;
+				break;
 			default:
 				print_usage();
 				return (1);
@@ -90,7 +94,7 @@ main(int argc, char *argv[]) {
 	}
 
 	if (optind == argc - 1) {
-		snprintf(command, COMMAND_LENGTH, command_skel, getenv("HOME"), argv[optind]);
+		snprintf(command, COMMAND_LENGTH, command_skel, dir, argv[optind]);
 	} else {
 		print_usage();
 		return (1);
@@ -98,9 +102,9 @@ main(int argc, char *argv[]) {
 
 	if ((pid = fork()) == 0) {
 #if defined(__APPLE__) || defined(__FreeBSD__)
-		execlp("/usr/local/bin/guile", "guile", "-c", command, NULL);
+		execlp("/usr/local/bin/guile", "guile", "-L", dir, "-c", command, NULL);
 #else
-		execlp("/usr/bin/guile", "guile", "-c", command, NULL);
+		execlp("/usr/bin/guile", "guile", "-L", dir, "-c", command, NULL);
 #endif
 		return (255);
 	}
