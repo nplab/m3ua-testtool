@@ -198,7 +198,7 @@
 (define (m3ua-asp-aspsm-o-002 tester-addr tester-port sut-addr sut-port)
   (let ((fd (m3ua-accept tester-addr tester-port)))
     (m3ua-wait-for-message fd m3ua-asp-up-message?)
-    (m3ua-send-message fd 0 (m3ua-make-asp-active-ack-message (list)))
+    (m3ua-send-message fd 0 (m3ua-make-asp-active-ack-message asp-active-ack-message-parameters))
     (let ((msg (m3ua-recv-message-with-timeout fd 2)))
       (close fd)
       (if (or (null? msg)
